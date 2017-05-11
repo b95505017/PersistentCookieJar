@@ -16,8 +16,9 @@
 
 package com.franmontiel.persistentcookiejar.cache;
 
+import android.support.v4.util.ArraySet;
+
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -28,7 +29,7 @@ public class SetCookieCache implements CookieCache {
     private Set<IdentifiableCookie> cookies;
 
     public SetCookieCache() {
-        cookies = new HashSet<>();
+        cookies = new ArraySet<>();
     }
 
     @Override
