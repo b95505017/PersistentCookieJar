@@ -23,7 +23,7 @@ dependencies {
 ```
 Usage
 -----
-Create an instance of `PersistentCookieJar` passing a `CookieCache` and a `CookiePersistor`:
+Create an instance of `PersistentTrayCookieJar` passing a `Context`:
 
 ```java
 ClearableCookieJar cookieJar = new PersistentTrayCookieJar(context);
