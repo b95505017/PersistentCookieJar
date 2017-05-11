@@ -26,7 +26,7 @@ import java.util.List;
 import okhttp3.Cookie;
 import okhttp3.HttpUrl;
 
-public class PersistentCookieJar implements ClearableCookieJar {
+class PersistentCookieJar implements ClearableCookieJar {
 
     private CookieCache cache;
     private CookiePersistor persistor;
