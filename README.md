@@ -1,6 +1,6 @@
 PersistentCookieJar for OkHttp 3
 ===============================
-A persistent CookieJar implementation for OkHttp 3 based on SharedPreferences.
+A persistent CookieJar implementation for OkHttp 3 based on [Tray](https://github.com/grandcentrix/tray) with multiprocess support.
 
 If you're looking for a OkHttp 2/HTTPUrlConnection persistent CookieStore it can be found at [this Gist] [1].
 
@@ -18,7 +18,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-    compile 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    compile 'com.github.b95505017:PersistentCookieJar:v1.0.3'
 }
 ```
 Usage
@@ -26,8 +26,7 @@ Usage
 Create an instance of `PersistentCookieJar` passing a `CookieCache` and a `CookiePersistor`:
 
 ```java
-ClearableCookieJar cookieJar =
-                new PersistentCookieJar(new SetCookieCache(), new SharedPrefsCookiePersistor(context));
+ClearableCookieJar cookieJar = new PersistentTrayCookieJar(context);
 ```
 
 Then just add the CookieJar when building your OkHttp client:
