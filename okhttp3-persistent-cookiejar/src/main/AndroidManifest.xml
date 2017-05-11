@@ -1,5 +1,8 @@
 <manifest
-    package="com.franmontiel.persistentcookiejar">
+    package="com.franmontiel.persistentcookiejar"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="net.grandcentrix.tray"/>
 
     <application/>
 
